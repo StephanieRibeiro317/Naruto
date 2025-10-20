@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<hed>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naruto</title>
-    <link rel="stylesheet" href="./css/style.css">
-</hed>
+    <link rel="stylesheet" href="./css/style.css"
+    alt="Foto do personagem">
+</head>
+
 <body>
 
-  <article class="card" aria-labelledby="char-name">
-    <img class="card__image" src="https://images.unsplash.com/photo-1604725962918-3d9d2b8b6a1b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Foto do personagem">
+    <article class="card" aria-labelledby="char-name">
+        <img id="imagem" class="card__image"
+            src="./img/loading.gif">
 
-    <div class="card__body">
-      <div class="card__title">
-        <h3 id="char-name" class="name">Nome do Personagem</h3>
-        <span class="badge">Raro</span>
-      </div>
+        <div class="card__body">
+            <div class="card__title">
+                <h3 id="personagem-nome" class="name"></h3>
+                <span id="personagem-rank"></span>
+            </div>
 
-      <div class="meta">
-        <div>
-          <div class="meta__label">Poder</div>
-          <div class="meta__value">Manipulação de relâmpagos</div>
+            <div class="meta">
+                <div>
+                    <div class="meta__label">Habilidades</div>
+                    <div id="personagem-habilidade" class="meta__value">
+                        <!--Lista ordenada (ol) ou não ordenada (ul)-->
+                        <!-- Cada item fica dentro de uma <li> -->
+                        
+                </div>
+                </div>
+
+                <div>
+                    <div class="meta__label">Vila</div>
+                    <div id="personagem-vila" class="meta__value"></div>
+                </div>
+            </div>
+
+            <p id="personagem-descricao" class="desc"></p>
+
+            <div class="card__footer">
+                <button class="accent-btn" aria-label="Ver mais detalhes" onclick="mostrarPersonagem();">Escolher Personagem</button>
+                <small id="personagem-poder" style="color:var(--muted); font-size:.8rem"></small>
+            </div>
         </div>
+    </article>
 
-        <div>
-          <div class="meta__label">Vila</div>
-          <div class="meta__value">Vila da Folha</div>
-        </div>
-      </div>
-
-      <p class="desc">Descrição curta: um shinobi ágil conhecido por suas técnicas de raio e grande lealdade à vila. Use essa área para um resumo curto e cativante.</p>
-
-      <div class="card__footer">
-        <button class="accent-btn" aria-label="Ver mais detalhes" onclick="mostrarPersonagem();">Escolher Personagem</button>
-        <small style="color:var(--muted); font-size:.8rem">Nível: 47</small>
-      </div>
-    </div>
-  </article>
     <script src="./js/api-naruto.js"></script>
 </body>
+
 </html>
